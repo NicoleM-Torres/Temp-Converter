@@ -11,11 +11,11 @@ document.getElementById("convertButton").addEventListener("click", function () {
     return;
   } // END IF STATEMENT
 
-  // If # to convert = the # converted
+  // If # to convert = the # converted displays ERROR mgs
   if (convFromUnit === convToUnit) {
     document.getElementById(
       "result"
-    ).innerText = `No conversion needed. ${temperature} ${
+    ).innerText = `ERROR: No conversion needed. ${temperature} ${
       convFromUnit.charAt(0).toUpperCase() + convFromUnit.slice(1)
     }`;
     return;
@@ -37,11 +37,11 @@ document.getElementById("convertButton").addEventListener("click", function () {
 // #endregion
 
 // #region convert Temperature
-function convertTemperature(temp, from, to) {
+function convertTemperature(temp, fromUnit, toUnit) {
   let celsius;
 
-  // Convert from to Celcius
-  switch (from) {
+  //
+  switch (fromUnit) {
     case "fahrenheit":
       celsius = ((temp - 32) * 5) / 9;
       break;
@@ -53,8 +53,7 @@ function convertTemperature(temp, from, to) {
       celsius = temp;
   }
 
-  // Convert from Celsius to the target unit
-  switch (to) {
+  switch (toUnit) {
     case "fahrenheit":
       return (celsius * 9) / 5 + 32;
     case "kelvin":

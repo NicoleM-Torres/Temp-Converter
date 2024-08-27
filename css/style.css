@@ -1,12 +1,43 @@
-body {
-  background-color: #007dfa;
+/* #region spaceHolders Display */
+@media (min-width: 992px) {
+  .spaceHolder {
+    display: block;
+  }
+  .space {
+    display: none;
+  }
 }
+@media (max-width: 991px) {
+  .spaceHolder {
+    display: none;
+  }
+  .space {
+    display: block;
+  }
+}
+/* #endregion */
 
-header {
+/* #region Main container */
+.header{
+    text-align: center;
+}
+.enterInfo {
+  margin-top: 50px;
   margin-bottom: 4px;
 }
 
+.buttonContainer {
+  margin-top: 30px;
+
+  text-align-last: center;
+}
+
+/* #endregion */
+
+/* #region Display of Results */
 #result {
   font-size: 24px;
   font-weight: bold;
 }
+
+/* #endregion */
