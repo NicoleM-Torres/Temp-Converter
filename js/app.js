@@ -6,8 +6,7 @@ document.getElementById("convertButton").addEventListener("click", function () {
 
   // If user input is not a number
   if (isNaN(temperature)) {
-    document.getElementById("result").innerText =
-      "ERROR: Not a valid entry.";
+    document.getElementById("result").innerText = "ERROR: Not a valid entry.";
     return;
   } // END IF STATEMENT
 
