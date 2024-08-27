@@ -25,21 +25,42 @@ document.getElementById("convertButton").addEventListener("click", function () {
 
 // #region convert Temperature
 
-// #endregion
+const convertedTemperature = convertTemperature(
+  temperature,
+  convFromUnit,
+  convToUnit
+);
+document.getElementById(
+  "result"
+).innerText = `Converted Temperature: ${convertedTemperature} ${
+  convToUnit.charAt(0).toUpperCase() + convToUnit.slice(1)
+}`;
+// });
 
-// #region convert from Cel to unit chosen
+function convertTemperature(temp, from, to) {
+  let celsius;
 
-// #endregion
+  // Convert from 'from' unit to Celsius
+  switch (from) {
+    case "fahrenheit":
+      celsius = ((temp - 32) * 5) / 9;
+      break;
+    case "kelvin":
+      celsius = temp - 273.15;
+      break;
+    case "celsius":
+    default:
+      celsius = temp;
+  }
 
-// #region convert to others
-      switch (to) {
-        case "fahrenheit":
-            return (celsius * 9 / 5) + 32;
-        case "kelvin":
-            return celsius + 273.15;
-        case "celsius":
-        default:
-            return celsius;
-    }
+  switch (to) {
+    case "fahrenheit":
+      return (celsius * 9) / 5 + 32;
+    case "kelvin":
+      return celsius + 273.15;
+    case "celsius":
+    default:
+      return celsius;
+  }
 } //END SWITCH
 // #endregion
