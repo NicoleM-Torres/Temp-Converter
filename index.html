@@ -5,55 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <title>Temperature Converter<title>
+    <title>Temperature Converter</title>
+    <!-- Fixed the closing title tag -->
   </head>
   <body>
     <div class="enterInfo container-fluid">
       <div class="row">
         <div class="col">
-    <!-- #region enterInfo Input -->
+          <!-- #region enterInfo Input -->
           <div class="form">
-              <label for="temperature">ENTER TEMP:</label>
-              <input type="number" id="temperature" class="form-control" placeholder="Temperature">
-            </div><!-- END OF FORM DIV -->
-    <!-- #endregion -->
+            <label for="temperature">ENTER TEMP:</label>
+            <input
+              type="number"
+              id="temperature"
+              class="form-control"
+              placeholder="Temperature"
+            />
+          </div>
+          <!-- END OF FORM DIV -->
+          <!-- #endregion -->
 
-    <!-- #region Convert From Form -->
-            <div class="form">
-              <label for="convFromUnit">Convert from:</label>
-              <select class="form-control" id="convFromUnit">
-                 <option value="celsius">Celsius</option>
-                  <option value="fahrenheit">Fahrenheit</option>
-                  <option value="kelvin">Kelvin</option>     
-              </select><!-- END OF SELECT -->
-            </div><!-- END OF FORM DIV -->
-    <!-- #endregion -->
-            
-    <!-- #region Convert To Form -->
-            <div class="form">
-              <label for="convToUnit">Convert To:</label>
-              <select class="form-control" id="convToUnit">
-                <option value="celsius">Celcius</option>
-                <option value="fahrenheit">Fahrenheit</option>
-                <option value="kelvin">Kelvin</option>
-              </select><!-- END OF SELECT -->
-            </div><!-- END OF FORM DIV -->
-    <!-- #endregion -->
-            
-    <!-- #region Convert Button & Display -->
-            <button id="convertButton" class="btn btn-primery-btn-block">Convert Temperature</button>
-          
-            <div id="result" class="convResult"></div>
+          <!-- #region Convert From Form -->
+          <div class="form">
+            <label for="convFromUnit">Convert from:</label>
+            <select class="form-control" id="convFromUnit">
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option></select
+            ><!-- END OF SELECT -->
+          </div>
+          <!-- END OF FORM DIV -->
+          <!-- #endregion -->
 
-    <!-- #endregion -->
-          
-          </div><!-- END OF COL -->
-        </div><!-- END OF ROW -->
-      </div><!-- END enterInfo CONTAINER -->
-  </body>
-  <script type="text/javascript" src="./js/app.js"></script>
-  <!-- jQuery and Bootstrap JS -->
+          <!-- #region Convert To Form -->
+          <div class="form">
+            <label for="convToUnit">Convert To:</label>
+            <select class="form-control" id="convToUnit">
+              <option value="celsius">Celsius</option>
+              <!-- Fixed typo from "Celcius" to "Celsius" -->
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option></select
+            ><!-- END OF SELECT -->
+          </div>
+          <!-- END OF FORM DIV -->
+          <!-- #endregion -->
+
+          <!-- #region Convert Button & Display -->
+          <button id="convertButton" class="btn btn-primary btn-block">
+            Convert Temperature
+          </button>
+          <!-- Fixed the button class -->
+          <div id="result" class="convResult"></div>
+          <!-- #endregion -->
+        </div>
+        <!-- END OF COL -->
+      </div>
+      <!-- END OF ROW -->
+    </div>
+    <!-- END OF enterInfo CONTAINER -->
+
+    <script type="text/javascript" src="./js/app.js"></script>
+    <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
