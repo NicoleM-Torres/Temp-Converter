@@ -21,7 +21,7 @@ document.getElementById("convertButton").addEventListener("click", function () {
     return;
   } // END IF STATEMENT
 
-  // Convert temp #
+  // Conversion Display
   const convertedTemperature = convertTemperature(
     temperature,
     convFromUnit,
