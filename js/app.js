@@ -23,14 +23,23 @@ document.getElementById("convertButton").addEventListener("click", function () {
 
 // #endregion
 
-// #region
-
-// #endregion
-
-// #region
+// #region convert Temperature
 
 // #endregion
 
 // #region convert from Cel to unit chosen
 
+// #endregion
+
+// #region convert to others
+      switch (to) {
+        case "fahrenheit":
+            return (celsius * 9 / 5) + 32;
+        case "kelvin":
+            return celsius + 273.15;
+        case "celsius":
+        default:
+            return celsius;
+    }
+} //END SWITCH
 // #endregion
