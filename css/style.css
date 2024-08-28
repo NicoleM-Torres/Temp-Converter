@@ -131,10 +131,12 @@ body {
   text-align: center;
 }
 
+.resultContainer {
+  padding: 15px;
+}
 .formContainer {
   background-color: rgba(216, 206, 194, 0.205);
   padding: 30px;
-  margin-bottom: 50px;
   border-radius: 20px;
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
