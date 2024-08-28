@@ -35,7 +35,7 @@ document.getElementById("convertButton").addEventListener("click", function () {
 });
 // #endregion
 
-// #region convert Temperature
+// #region convert Temperature func-switch
 function convertTemperature(temp, fromUnit, toUnit) {
   let celsius;
 
