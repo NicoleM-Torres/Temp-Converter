@@ -28,8 +28,7 @@ document.getElementById("convertButton").addEventListener("click", function () {
   );
   document.getElementById(
     "result"
-  ).innerText = `From: ${temperature} ${convFromUnit.charAt(0).toUpperCase()} 
-  To: ${convertedTemperature} ${
+  ).innerText = `Convert from ${convFromUnit} to ${convertedTemperature} ${
     convToUnit.charAt(0).toUpperCase() + convToUnit.slice(1)
   }`;
 });

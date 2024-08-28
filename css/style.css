@@ -1,3 +1,4 @@
+
 /* #region spaceHolders Display */
 @media (min-width: 992px) {
   .spaceHolder {
@@ -28,13 +29,8 @@ html,
 body {
   height: 100%;
   margin: 0;
-}
-
-body {
-  font-family: sans-serif;
   overflow: hidden;
   position: relative;
-  /* background-color: #171717; Background color */
 }
 
 .lines {
@@ -44,10 +40,10 @@ body {
   right: 0;
   height: 100%;
   width: 100%;
-  pointer-events: none; /* Ensure it doesn't interfere with other elements */
-  z-index: -1; /* Ensure it's behind other content */
+  pointer-events: none; /* Ensures it doesn't interfere with other elements */
+  z-index: -1; /* makes it stay behind other content */
   overflow: hidden; /* Hide overflow */
-  background-color: black; /* Background color for lines container */
+  background-color: black; /* Background color for lines(path) container */
 }
 
 .line {
@@ -80,7 +76,7 @@ body {
 /* Adjust line positions and delays */
 .line:nth-child(1) {
   left: 11%;
-  animation-delay: 0s; /* Start immediately */
+  /* animation-delay: 0s; Start immediately */
 }
 
 .line:nth-child(2) {
@@ -105,14 +101,31 @@ body {
 /* #endregion */
 
 /* #region Main container */
+
 .header {
   padding: 30px;
   text-align: center;
+  border-radius: 20px;
+  color: cadetblue;
+}
+
+.header h1 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: beige;
 }
 
 .enterInfo {
   margin-top: 50px;
   margin-bottom: 4px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: beige;
+
 }
 
 .buttonContainer {
@@ -124,6 +137,11 @@ body {
   background-color: rgba(216, 206, 194, 0.205);
   padding: 30px;
   border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: beige;
 }
 /* #endregion */
 
