@@ -21,7 +21,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
 
 html,
@@ -31,11 +31,10 @@ body {
 }
 
 body {
-  background-color: #17171763;
-  color: #000;
   font-family: sans-serif;
   overflow: hidden;
   position: relative;
+  /* background-color: #171717; Background color */
 }
 
 .lines {
@@ -45,8 +44,10 @@ body {
   right: 0;
   height: 100%;
   width: 100%;
-  pointer-events: none; /* Ensure it does not interfere with interactions */
+  pointer-events: none; /* Ensure it doesn't interfere with other elements */
   z-index: -1; /* Ensure it's behind other content */
+  overflow: hidden; /* Hide overflow */
+  background-color: black; /* Background color for lines container */
 }
 
 .line {
@@ -54,7 +55,8 @@ body {
   width: 1px;
   height: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1); /* Line color */
+  transform: translateX(-50%); /* Center the line */
 }
 
 .line::after {
@@ -75,16 +77,20 @@ body {
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 }
 
+/* Adjust line positions and delays */
 .line:nth-child(1) {
-  left: 25%;
+  left: 11%;
+  animation-delay: 0s; /* Start immediately */
 }
 
 .line:nth-child(2) {
   left: 50%;
+  animation-delay: 3s; /* Delay by 3 seconds */
 }
 
 .line:nth-child(3) {
-  left: 75%;
+  left: 90%;
+  animation-delay: 6s; /* Delay by 6 seconds */
 }
 
 @keyframes drop {
@@ -95,12 +101,15 @@ body {
     top: 110%;
   }
 }
+
 /* #endregion */
 
 /* #region Main container */
 .header {
+  padding: 30px;
   text-align: center;
 }
+
 .enterInfo {
   margin-top: 50px;
   margin-bottom: 4px;
@@ -108,10 +117,11 @@ body {
 
 .buttonContainer {
   margin-top: 30px;
-  text-align-last: center;
+  text-align: center;
 }
+
 .formContainer {
-  background-color: rgba(216, 206, 194, 0.637);
+  background-color: rgba(216, 206, 194, 0.205);
   padding: 30px;
   border-radius: 20px;
 }
