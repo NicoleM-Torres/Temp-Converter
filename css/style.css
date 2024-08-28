@@ -1,4 +1,3 @@
-
 /* #region spaceHolders Display */
 @media (min-width: 992px) {
   .spaceHolder {
@@ -125,7 +124,6 @@ body {
   font-weight: 700;
   font-style: normal;
   color: beige;
-
 }
 
 .buttonContainer {
@@ -136,6 +134,7 @@ body {
 .formContainer {
   background-color: rgba(216, 206, 194, 0.205);
   padding: 30px;
+  margin-bottom: 50px;
   border-radius: 20px;
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
